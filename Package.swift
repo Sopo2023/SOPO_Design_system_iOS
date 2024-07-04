@@ -5,8 +5,8 @@ import PackageDescription
 
 let package = Package(
     name: "SDS",
+    platforms: [.iOS(.v15)],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "SDS",
             targets: ["SDS"]),

@@ -1,7 +1,7 @@
 import SwiftUI
 
 public struct SopoColor {
-    struct Pallete { }
-    struct Sementic { }
+    public struct Pallete { }
+    public struct Sementic { }
 }
 
