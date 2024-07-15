@@ -2,7 +2,7 @@ import SwiftUI
 
 extension SopoColor.Pallete {
     public struct Common { }
-    public enum Primary { }
+    public struct Primary { }
 }
 
 extension SopoColor.Pallete.Common {
@@ -10,7 +10,7 @@ extension SopoColor.Pallete.Common {
 }
 
 extension SopoColor.Pallete.Primary {
-    public enum Green: SopoColor.CanColor {
+    public struct Green: SopoColor.CanColor {
         var w100: Color = Color("Green100")
         var w200: Color = Color("Green200")
         var w300: Color = Color("Green300")
@@ -23,9 +23,9 @@ extension SopoColor.Pallete.Primary {
         
     }
     
-    public enum LightGray { }
+    public struct LightGray { }
     
-    public enum DarkGray { }
+    public struct DarkGray { }
 }
 
 
