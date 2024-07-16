@@ -10,21 +10,35 @@ extension SopoColor.Pallete.Common {
 }
 
 extension SopoColor.Pallete.Primary {
-    public struct Green: SopoColor.CanColor {
-        static var w100: Color = Color("Green100")
-        static var w200: Color = Color("Green200")
-        static var w300: Color = Color("Green300")
-        static var w400: Color = Color("Green400")
-        static var w500: Color = Color("Green500")
-        static var w600: Color = Color("Green600")
-        static var w700: Color = Color("Green700")
-        static var w800: Color = Color("Green800")
-        static var w900: Color = Color("Green900")
+    public enum Green: SopoColor.CanColor {
+        case w100, w200, w300, w400, w500, w600, w700, w800, w900
+        
+        var color: Color {
+            switch self {
+            case .w100:
+                return Color("Green100")
+            case .w200:
+                return Color("Green200")
+            case .w300:
+                return Color("Green300")
+            case .w400:
+                return Color("Green400")
+            case .w500:
+                return Color("Green500")
+            case .w600:
+                return Color("Green600")
+            case .w700:
+                return Color("Green700")
+            case .w800:
+                return Color("Green800")
+            case .w900:
+                return Color("Green900")
+            }
+        }
+        
+        
+        
     }
-    
-    public struct LightGray { }
-    
-    public struct DarkGray { }
 }
 
 
