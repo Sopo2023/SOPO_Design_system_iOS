@@ -1,11 +1,20 @@
 import SwiftUI
 
 extension SopoColor.Pallete {
-    public struct Common { }
-    public struct Primary { }
+    public enum Common { case w0, w100 }
+    public enum Primary { }
 }
 
-extension SopoColor.Pallete.Common {
+extension SopoColor.Pallete.Common: SopoColor.CanColor {
+    public var color: Color {
+        switch self {
+        case .w0:
+            return Color("Common0", bundle: .module)
+        case .w100:
+            return Color("Common100", bundle: .module)
+        }
+    }
+    
     
 }
 
@@ -17,7 +26,7 @@ extension SopoColor.Pallete.Primary {
         public var color: Color {
             switch self {
             case .w100:
-                return Color(.green100)
+                return Color("Green200", bundle: .module)
             case .w200:
                 return Color("Green200", bundle: .module)
             case .w300:
