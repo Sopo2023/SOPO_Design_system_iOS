@@ -13,7 +13,7 @@ extension SopoColor.Pallete.Primary {
     public enum Green: SopoColor.CanColor {
         case w100, w200, w300, w400, w500, w600, w700, w800, w900
         
-        public var color: Color {
+        var color: Color {
             switch self {
             case .w100:
                 return Color("Green100")
