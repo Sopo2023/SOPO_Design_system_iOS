@@ -2,16 +2,22 @@ import SwiftUI
 
 extension SopoColor {
     public protocol CanColor {
-        func color() -> Color
+        var color: Color { get }
     }
-    
-   
-    
 }
 
 
 extension SopoColor.CanColor {
-    public func color() -> Color {
-        return Color("\(String(reflecting: self))/\(String(describing: self))")
+    public var color: Color {
+        get {
+            toColor()
+        }
+    }
+    
+    private func toColor() -> Color {
+        let absoluteValue = String(reflecting: self)
+        let relativeValue = String(describing: self)
+        
+        return Color("\(absoluteValue.split(separator: ".").dropLast().last ?? "")/\(relativeValue)")
     }
 }
