@@ -10,14 +10,18 @@ extension SopoColor {
 extension SopoColor.CanColor {
     public var color: Color {
         get {
-            toColor()
+            self.toColor()
         }
     }
     
     private func toColor() -> Color {
-        let absoluteValue = String(reflecting: self)
-        let relativeValue = String(describing: self)
+        let enumName = String(reflecting: self).split(separator: ".").dropLast().last
+        let caseName = String(describing: self)
         
-        return Color("\(absoluteValue.split(separator: ".").dropLast().last ?? "")/\(relativeValue)")
+        if enumName == nil {
+            return .gray
+        }
+        
+        return Color("\(enumName!)/\(caseName)", bundle: .module)
     }
 }
