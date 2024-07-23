@@ -1,13 +1,21 @@
 import SwiftUI
 
 extension SopoColor {
-    public protocol CanColor {
+    public protocol ColorContain {
         var color: Color { get }
+    }
+    
+    public protocol CanPallete: ColorContain {
+        
+    }
+    
+    public protocol CanSementic: ColorContain {
+        var pallete: CanPallete { get }
     }
 }
 
 
-extension SopoColor.CanColor {
+extension SopoColor.CanPallete {
     public var color: Color {
         get {
             self.toColor()
@@ -23,5 +31,13 @@ extension SopoColor.CanColor {
         }
         
         return Color("\(enumName!)/\(caseName)", bundle: .module)
+    }
+}
+
+extension SopoColor.CanSementic {
+    public var color: Color {
+        get {
+            self.pallete.color
+        }
     }
 }
