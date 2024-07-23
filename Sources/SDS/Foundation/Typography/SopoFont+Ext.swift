@@ -21,9 +21,8 @@ extension SopoFont.Fontable {
         }
     }
     
-    
-    
-    public func font( size: CGFloat ) -> Font {        
+    public func font( size: CGFloat ) -> Font {   
+        self.loadFont()
         return Font.custom(name, size: size)
     }
 }
