@@ -10,7 +10,7 @@ extension SopoColor.Sementic {
 
 
 extension SopoColor.Sementic.Primary: SopoColor.CanSementic {
-    var pallete: any SopoColor.CanPallete {
+    public var pallete: any SopoColor.CanPallete {
         switch self {
         case .light:
             return SopoColor.Pallete.Green.w60
@@ -25,7 +25,7 @@ extension SopoColor.Sementic.Primary: SopoColor.CanSementic {
 }
 
 extension SopoColor.Sementic.Label: SopoColor.CanSementic {
-    var pallete: any SopoColor.CanPallete {
+    public var pallete: any SopoColor.CanPallete {
         switch self {
         case .normal:
             return SopoColor.Pallete.Neutral.w5
@@ -44,7 +44,7 @@ extension SopoColor.Sementic.Label: SopoColor.CanSementic {
 }
 
 extension SopoColor.Sementic.Background: SopoColor.CanSementic {
-    var pallete: any SopoColor.CanPallete {
+    public var pallete: any SopoColor.CanPallete {
         switch self {
         case .normal:
             return SopoColor.Pallete.LightGreen.w95
@@ -57,7 +57,7 @@ extension SopoColor.Sementic.Background: SopoColor.CanSementic {
 }
 
 extension SopoColor.Sementic.Line: SopoColor.CanSementic {
-    var pallete: any SopoColor.CanPallete {
+    public var pallete: any SopoColor.CanPallete {
         switch self {
         case .normal:
             return SopoColor.Pallete.Gray.w90
@@ -70,7 +70,7 @@ extension SopoColor.Sementic.Line: SopoColor.CanSementic {
 }
 
 extension SopoColor.Sementic.Status: SopoColor.CanSementic {
-    var pallete: any SopoColor.CanPallete {
+    public var pallete: any SopoColor.CanPallete {
         switch self {
         case .positive:
             return SopoColor.Pallete.Green.w50
