@@ -14,17 +14,9 @@ extension SopoFont {
 
 
 extension SopoFont.CanDefine {
-    public func loadFont() {
-        guard let asset = NSDataAsset(name: self.name, bundle: .module),
-              let provider = CGDataProvider(data: asset.data as NSData),
-              let font = CGFont(provider),
-              CTFontManagerRegisterGraphicsFont(font, nil) else {
-            return
-        }
-    }
+  
     
-    public func font( size: CGFloat ) -> Font {   
-        self.loadFont()
+    public func font( size: CGFloat ) -> Font {
         return Font.custom(self.name, size: size)
     }
 }
