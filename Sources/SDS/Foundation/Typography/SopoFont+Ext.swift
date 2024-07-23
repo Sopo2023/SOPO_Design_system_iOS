@@ -6,10 +6,14 @@ extension SopoFont {
     }
 }
 
+enum SopoFontError: Error {
+    case fileNotFound
+}
+
 
 extension SopoFont.Fontable {
-    private func loadFont(name: String) {
-        guard let asset = NSDataAsset(name: name, bundle: .module),
+    private func loadFont() {
+        guard let asset = NSDataAsset(name: self.name, bundle: .module),
               let provider = CGDataProvider(data: asset.data as NSData),
               let font = CGFont(provider),
               CTFontManagerRegisterGraphicsFont(font, nil) else {
@@ -17,9 +21,9 @@ extension SopoFont.Fontable {
         }
     }
     
-    public func font( size: CGFloat ) -> Font {
-        loadFont(name: name)
-        
+    
+    
+    public func font( size: CGFloat ) -> Font {        
         return Font.custom(name, size: size)
     }
 }
