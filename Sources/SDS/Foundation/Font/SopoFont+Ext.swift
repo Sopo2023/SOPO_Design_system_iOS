@@ -8,7 +8,18 @@ extension SopoFont {
 
 
 extension SopoFont.Fontable {
+    private func loadFont(name: String) {
+        guard let asset = NSDataAsset(name: name, bundle: .module),
+              let provider = CGDataProvider(data: asset.data as NSData),
+              let font = CGFont(provider),
+              CTFontManagerRegisterGraphicsFont(font, nil) else {
+            return
+        }
+    }
+    
     public func font( size: CGFloat ) -> Font {
-        Font.custom(name, size: size)
+        loadFont(name: name)
+        
+        return Font.custom(name, size: size)
     }
 }
