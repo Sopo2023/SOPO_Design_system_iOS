@@ -1,11 +1,11 @@
 import SwiftUI
 
 extension SopoColor.Sementic {
-    enum Primary { case light, normal, strong, heavy }
-    enum Label { case normal, strong, neutral, alternative, assitive, disable }
-    enum Background { case normal, strong, alternative }
-    enum Line { case normal, neutral, alternative }
-    enum Status { case positive, cautionary, destructive }
+    public enum Primary { case light, normal, strong, heavy }
+    public enum Label { case normal, strong, neutral, alternative, assitive, disable }
+    public enum Background { case normal, strong, alternative }
+    public enum Line { case normal, neutral, alternative }
+    public enum Status { case positive, cautionary, destructive }
 }
 
 
