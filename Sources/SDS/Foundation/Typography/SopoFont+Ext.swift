@@ -24,6 +24,7 @@ extension SopoFont.CanDefine {
     }
     
     public func font( size: CGFloat ) -> Font {   
+        self.loadFont()
         return Font.custom(self.name, size: size)
     }
 }
