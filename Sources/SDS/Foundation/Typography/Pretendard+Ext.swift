@@ -1,6 +1,6 @@
 import SwiftUI
 
-extension SopoFont.Pretendard: SopoFont.Fontable {
+extension SopoFont.Pretendard: SopoFont.CanDefine {
     public var name: String {
         switch self {
         case .thin:
