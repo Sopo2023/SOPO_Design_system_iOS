@@ -18,42 +18,42 @@ public struct SopoTabView<Content: View>: View {
         ZStack {
             content
             
-            GeometryReader { proxy in
-                VStack {
-                    Spacer()
-                    
-                    RoundedRectangle(cornerRadius: 13)
-                        .frame(height: proxy.size.height * 0.07)
-                        .foregroundStyle(Color.common(.w100))
-                        .shadow(color: Color.common(.w0).opacity(0.12), radius: 9, y: 3)
-                        .overlay {
-                            HStack(spacing: 28) {
-                                ForEach(SopoTabItem.allCases, id: \.rawValue) { item in
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .frame(width: 38, height: 38)
-                                        .foregroundStyle(item == selection ? Color.primary(.strong) : Color.clear)
-                                        .overlay {
-                                            Button {
-                                                withAnimation {
-                                                    selection = item
-                                                }
-                                            } label: {
-                                                item.icon
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .scaleEffect(1.2)
-                                                    .foregroundStyle(Color.common(item == selection ? .w100 : .w0))
+            
+            VStack {
+                Spacer()
+                
+                RoundedRectangle(cornerRadius: 13)
+                    .frame(height: 60)
+                    .foregroundStyle(Color.common(.w100))
+                    .shadow(color: Color.common(.w0).opacity(0.12), radius: 9, y: 3)
+                    .overlay {
+                        HStack(spacing: 28) {
+                            ForEach(SopoTabItem.allCases, id: \.rawValue) { item in
+                                RoundedRectangle(cornerRadius: 10)
+                                    .frame(width: 38, height: 38)
+                                    .foregroundStyle(item == selection ? Color.primary(.strong) : Color.clear)
+                                    .overlay {
+                                        Button {
+                                            withAnimation {
+                                                selection = item
                                             }
-                                            .padding(10)
-                                            .disabled(item == selection)
+                                        } label: {
+                                            item.icon
+                                                .resizable()
+                                                .scaledToFit()
+                                                .scaleEffect(1.2)
+                                                .foregroundStyle(Color.common(item == selection ? .w100 : .w0))
                                         }
-                                }
+                                        .padding(10)
+                                        .disabled(item == selection)
+                                    }
                             }
                         }
-                        .padding(.horizontal, 28)
-                        .padding(.bottom, 32)
-                }
+                    }
+                    .padding(.horizontal, 28)
+                    .padding(.bottom, 32)
             }
+            
         }
     }
     
