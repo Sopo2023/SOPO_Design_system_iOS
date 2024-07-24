@@ -44,9 +44,8 @@ extension SopoIcon {
                 
             }.joined()
             
-            print(parsedStr)
             
-            return Image(self.rawValue, bundle: .module)
+            return Image(parsedStr, bundle: .module)
         }
     }
 }
