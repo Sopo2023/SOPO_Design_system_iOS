@@ -5,7 +5,7 @@ public struct SopoTabView<Content: View>: View {
     @Binding var selection: SopoTabItem
     let content: Content
     
-    init(
+    public init(
         selection: Binding<SopoTabItem>,
         @ViewBuilder content: () -> Content
     ) {
