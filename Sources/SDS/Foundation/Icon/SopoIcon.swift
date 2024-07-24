@@ -29,6 +29,7 @@ public enum SopoIcon: String, CaseIterable {
          note,
          eyeClose,
          eyeOpen,
+         search,
          send,
          setting,
          user,
