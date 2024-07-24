@@ -10,9 +10,9 @@ public enum SopoIcon: String, CaseIterable {
          award,
          callmeBaby,
          chat,
-         checkRing,
          check,
-         clickProfile,
+         checkRing,
+         checkRingFill,
          clock,
          closeRingFill,
          closeRing,
@@ -24,10 +24,9 @@ public enum SopoIcon: String, CaseIterable {
          note,
          eyeClose,
          eyeOpen,
-         profile,
          send,
          setting,
-         success,
+         user,
          write
 }
 
