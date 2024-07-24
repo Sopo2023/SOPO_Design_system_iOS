@@ -18,7 +18,6 @@ public struct SopoTabView<Content: View>: View {
         ZStack {
             content
             
-            
             VStack {
                 Spacer()
                 
@@ -34,9 +33,7 @@ public struct SopoTabView<Content: View>: View {
                                     .foregroundStyle(item == selection ? Color.primary(.strong) : Color.clear)
                                     .overlay {
                                         Button {
-                                            withAnimation {
-                                                selection = item
-                                            }
+                                            selection = item
                                         } label: {
                                             item.icon
                                                 .resizable()
@@ -57,10 +54,4 @@ public struct SopoTabView<Content: View>: View {
         }
     }
     
-}
-
-#Preview {
-    SopoTabView(selection: .constant(.home)) {
-        
-    }
 }
