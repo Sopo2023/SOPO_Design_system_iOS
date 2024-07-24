@@ -7,6 +7,7 @@ public enum SopoIcon: String, CaseIterable {
          arrowLeft,
          arrowRight,
          arrowUp,
+         award,
          callmeBaby,
          chat,
          checkRing,
