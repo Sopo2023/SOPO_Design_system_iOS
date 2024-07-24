@@ -31,7 +31,7 @@ public enum SopoIcon: String, CaseIterable {
 }
 
 extension SopoIcon {
-    var image: Image {
+    public var image: Image {
         get {
             let parsedStr = self.rawValue.map { c in
                 var value: String = String(c)
