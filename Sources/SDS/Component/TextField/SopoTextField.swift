@@ -1,26 +1,24 @@
 import SwiftUI
 
+
 public struct SopoTextField: View {
     
     @Binding var text: String
     let prompt: String
     let isSecure: Bool
-    let inputType: NSTextContentType?
     let trailing: AnyView?
     
-    public init(text: Binding<String>, prompt: String, isSecure: Bool = false, inputType: NSTextContentType? = .none, trailing: @escaping () -> some View) {
+    public init(text: Binding<String>, prompt: String, isSecure: Bool = false, trailing: @escaping () -> some View) {
         self._text = text
         self.prompt = prompt
         self.isSecure = isSecure
-        self.inputType = inputType
         self.trailing = AnyView(trailing())
     }
     
-    public init(text: Binding<String>, prompt: String, isSecure: Bool = false, inputType: NSTextContentType? = .none) {
+    public init(text: Binding<String>, prompt: String, isSecure: Bool = false) {
         self._text = text
         self.prompt = prompt
         self.isSecure = isSecure
-        self.inputType = inputType
         self.trailing = nil
     }
     
@@ -40,7 +38,7 @@ public struct SopoTextField: View {
                                 prompt: Text(prompt)
                                     .foregroundColor(.label(.disable))
                             )
-                            
+                            .textContentType(.password)
                         }
                         else {
                             TextField(
@@ -52,10 +50,9 @@ public struct SopoTextField: View {
                         }
                     }
                     .autocorrectionDisabled()
-                    .textContentType(inputType)
-                    #if os(iOS)
+#if os(iOS)
                     .textInputAutocapitalization(.never)
-                    #endif
+#endif
                     .font(.label(.bold))
                     .foregroundStyle(Color.label(.normal))
                     
