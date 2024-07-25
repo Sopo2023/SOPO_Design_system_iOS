@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct SopoTextField: View {
+public struct SopoTextField: View {
     
     @Binding var text: String
     let prompt: String
@@ -8,7 +8,7 @@ struct SopoTextField: View {
     let inputType: NSTextContentType?
     let trailing: AnyView?
     
-    init(text: Binding<String>, prompt: String, isSecure: Bool = false, inputType: NSTextContentType? = .none, trailing: @escaping () -> some View) {
+    public init(text: Binding<String>, prompt: String, isSecure: Bool = false, inputType: NSTextContentType? = .none, trailing: @escaping () -> some View) {
         self._text = text
         self.prompt = prompt
         self.isSecure = isSecure
@@ -16,7 +16,7 @@ struct SopoTextField: View {
         self.trailing = AnyView(trailing())
     }
     
-    init(text: Binding<String>, prompt: String, isSecure: Bool = false, inputType: NSTextContentType? = .none) {
+    public init(text: Binding<String>, prompt: String, isSecure: Bool = false, inputType: NSTextContentType? = .none) {
         self._text = text
         self.prompt = prompt
         self.isSecure = isSecure
@@ -25,7 +25,7 @@ struct SopoTextField: View {
     }
     
     
-    var body: some View {
+    public var body: some View {
         RoundedRectangle(cornerRadius: 12)
             .strokeBorder(Color.label(.disable))
             .background(Color.common(.w100).clipShape(RoundedRectangle(cornerRadius: 12)))
