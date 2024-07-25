@@ -15,9 +15,8 @@
 ### Swift Package Manager
 ```swift
 dependencies: [
-  .remote(
+  .package(
     url: "https://github.com/Sopo2023/SOPO_Design_system_iOS.git",
-    requirement: .branch("main")
-  )
+    requirement: .branch("main"))
 ]
 ```
