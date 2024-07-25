@@ -1,11 +1,11 @@
 import SwiftUI
 
 public struct SopoBottomButton: View {
+    let action: (() -> ())?
     let text: Text
     let background: Color
-    let action: (() -> ())?
     
-    public init(_ text: () -> Text, background: Color = .primary(.normal), action: (() -> ())?) {
+    public init(action: (() -> ())? = nil, text: () -> Text, background: Color = .primary(.normal)) {
         self.text = text()
         self.background = background
         self.action = action
