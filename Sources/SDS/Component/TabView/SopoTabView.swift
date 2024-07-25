@@ -9,7 +9,7 @@ public struct SopoTabView<Content: View>: View {
     
     public func hideBar(_ isNotAppear: Bool = true) -> some View {
         var tabView = self
-        tabView.barOpacity = isNotAppear ? 1.0 : 0.0
+        tabView.barOpacity = isNotAppear ? 0.0 : 1.0
         
         return tabView
     }
