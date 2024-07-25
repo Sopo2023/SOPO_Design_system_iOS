@@ -4,7 +4,7 @@ extension SopoTextStyle.Title1: SopoFont.Fontable {
     public var font: Font {
         switch self {
         case .bold:
-                .pretendard(.extraBold, size: 32)
+                .pretendard(.extrabold, size: 32)
         case .medium:
                 .pretendard(.medium, size: 32)
         case .regular:
