@@ -13,10 +13,10 @@ public struct SopoSearchField: View {
     }
     
     public var body: some View {
-        RoundedRectangle(cornerRadius: 16)
+        RoundedRectangle(cornerRadius: 100)
             .strokeBorder(Color.primary(.normal), lineWidth: 1.5)
             .background(Color.common(.w100)
-                .clipShape(RoundedRectangle(cornerRadius: 16)))
+                .clipShape(RoundedRectangle(cornerRadius: 100)))
             .frame(height: 40)
             .overlay {
                 HStack {

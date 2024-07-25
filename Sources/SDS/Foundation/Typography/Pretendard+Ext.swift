@@ -24,8 +24,8 @@ extension SopoFont.Pretendard: SopoFont.CanDefine {
             "Pretendard-Regular"
         case .medium:
             "Pretendard-Medium"
-        case .semibold:
-            "Pretendard-Semibold"
+        case .semiBold:
+            "Pretendard-SemiBold"
         case .bold:
             "Pretendard-Bold"
         case .extraBold:
