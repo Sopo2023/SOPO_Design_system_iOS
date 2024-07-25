@@ -13,6 +13,10 @@ extension Color {
         type.color
     }
     
+    public static func line( _ type: SopoColor.Sementic.Line ) -> Color {
+        type.color
+    }
+    
     public static func status( _ type: SopoColor.Sementic.Status ) -> Color {
         type.color
     }

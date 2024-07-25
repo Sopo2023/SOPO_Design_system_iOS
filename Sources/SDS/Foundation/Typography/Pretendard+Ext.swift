@@ -16,7 +16,7 @@ extension SopoFont.Pretendard: SopoFont.CanDefine {
         switch self {
         case .thin:
             "Pretendard-Thin"
-        case .extraLight:
+        case .extralight:
             "Pretendard-ExtraLight"
         case .light:
             "Pretendard-Light"
@@ -24,11 +24,11 @@ extension SopoFont.Pretendard: SopoFont.CanDefine {
             "Pretendard-Regular"
         case .medium:
             "Pretendard-Medium"
-        case .semiBold:
+        case .semibold:
             "Pretendard-SemiBold"
         case .bold:
             "Pretendard-Bold"
-        case .extraBold:
+        case .extrabold:
             "Pretendard-ExtraBold"
         case .black:
             "Pretendard-Black"
