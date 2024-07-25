@@ -6,6 +6,7 @@ extension SopoColor.Sementic {
     public enum Background { case normal, strong, alternative }
     public enum Line { case normal, neutral, alternative }
     public enum Status { case positive, cautionary, destructive }
+    public enum Avatar { case icon, background }
 }
 
 
@@ -80,4 +81,17 @@ extension SopoColor.Sementic.Status: SopoColor.CanSementic {
             return SopoColor.Pallete.Red.w50
         }
     }
+}
+
+extension SopoColor.Sementic.Avatar: SopoColor.CanSementic {
+    public var pallete: any SopoColor.CanPallete {
+        switch self {
+        case .icon:
+            return SopoColor.Pallete.Green.w80
+        case .background:
+            return SopoColor.Pallete.Green.w90
+        }
+    }
+    
+    
 }

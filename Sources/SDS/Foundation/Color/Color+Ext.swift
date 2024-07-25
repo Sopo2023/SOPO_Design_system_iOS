@@ -17,6 +17,11 @@ extension Color {
         type.color
     }
     
+    public static func avatar( _ type: SopoColor.Sementic.Avatar ) -> Color {
+        type.color
+    }
+    
+    
     public static func common( _ weight: SopoColor.Pallete.Common ) -> Color {
         weight.color
     }
