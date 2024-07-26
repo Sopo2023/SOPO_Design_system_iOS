@@ -19,11 +19,12 @@ public struct SopoBottomButton: View {
         } label: {
             RoundedRectangle(cornerRadius: 12)
                 .frame(height: 56)
-                .padding(.horizontal, 36)
                 .foregroundStyle(background)
                 .overlay {
                     text
                 }
         }
+        
     }
 }
+
