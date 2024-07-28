@@ -1,5 +1,6 @@
  import SwiftUI
 
+@available(iOS 15, *)
 public struct SopoDevider: View {
     let color: Color
     
@@ -13,6 +14,10 @@ public struct SopoDevider: View {
             .foregroundStyle(color)
             .frame(height: 1)
         
-        
     }
+}
+
+
+#Preview {
+    SopoDevider()
 }
