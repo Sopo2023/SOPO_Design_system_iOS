@@ -9,7 +9,7 @@ extension SopoColor {
         
     }
     
-    public protocol CanSementic: ColorContain {
+    public protocol CanSemantic: ColorContain {
         var pallete: CanPallete { get }
     }
 }
@@ -34,7 +34,7 @@ extension SopoColor.CanPallete {
     }
 }
 
-extension SopoColor.CanSementic {
+extension SopoColor.CanSemantic {
     public var color: Color {
         get {
             self.pallete.color

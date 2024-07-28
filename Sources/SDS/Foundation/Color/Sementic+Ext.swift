@@ -1,6 +1,6 @@
 import SwiftUI
 
-extension SopoColor.Sementic {
+extension SopoColor.Semantic {
     public enum Primary { case light, normal, strong, heavy }
     public enum Label { case normal, strong, neutral, alternative, assitive, disable }
     public enum Background { case normal, strong, alternative }
@@ -10,7 +10,7 @@ extension SopoColor.Sementic {
 }
 
 
-extension SopoColor.Sementic.Primary: SopoColor.CanSementic {
+extension SopoColor.Semantic.Primary: SopoColor.CanSemantic {
     public var pallete: any SopoColor.CanPallete {
         switch self {
         case .light:
@@ -25,7 +25,7 @@ extension SopoColor.Sementic.Primary: SopoColor.CanSementic {
     }
 }
 
-extension SopoColor.Sementic.Label: SopoColor.CanSementic {
+extension SopoColor.Semantic.Label: SopoColor.CanSemantic {
     public var pallete: any SopoColor.CanPallete {
         switch self {
         case .normal:
@@ -44,7 +44,7 @@ extension SopoColor.Sementic.Label: SopoColor.CanSementic {
     }
 }
 
-extension SopoColor.Sementic.Background: SopoColor.CanSementic {
+extension SopoColor.Semantic.Background: SopoColor.CanSemantic {
     public var pallete: any SopoColor.CanPallete {
         switch self {
         case .normal:
@@ -57,7 +57,7 @@ extension SopoColor.Sementic.Background: SopoColor.CanSementic {
     }
 }
 
-extension SopoColor.Sementic.Line: SopoColor.CanSementic {
+extension SopoColor.Semantic.Line: SopoColor.CanSemantic {
     public var pallete: any SopoColor.CanPallete {
         switch self {
         case .normal:
@@ -70,7 +70,7 @@ extension SopoColor.Sementic.Line: SopoColor.CanSementic {
     }
 }
 
-extension SopoColor.Sementic.Status: SopoColor.CanSementic {
+extension SopoColor.Semantic.Status: SopoColor.CanSemantic {
     public var pallete: any SopoColor.CanPallete {
         switch self {
         case .positive:
@@ -83,7 +83,7 @@ extension SopoColor.Sementic.Status: SopoColor.CanSementic {
     }
 }
 
-extension SopoColor.Sementic.Avatar: SopoColor.CanSementic {
+extension SopoColor.Semantic.Avatar: SopoColor.CanSemantic {
     public var pallete: any SopoColor.CanPallete {
         switch self {
         case .icon:

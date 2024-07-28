@@ -1,27 +1,27 @@
 import SwiftUI
 
 extension Color {
-    public static func primary( _ type: SopoColor.Sementic.Primary ) -> Color {
+    public static func primary( _ type: SopoColor.Semantic.Primary ) -> Color {
         type.color
     }
     
-    public static func label( _ type: SopoColor.Sementic.Label ) -> Color {
+    public static func label( _ type: SopoColor.Semantic.Label ) -> Color {
         type.color
     }
     
-    public static func background( _ type: SopoColor.Sementic.Background ) -> Color {
+    public static func background( _ type: SopoColor.Semantic.Background ) -> Color {
         type.color
     }
     
-    public static func line( _ type: SopoColor.Sementic.Line ) -> Color {
+    public static func line( _ type: SopoColor.Semantic.Line ) -> Color {
         type.color
     }
     
-    public static func status( _ type: SopoColor.Sementic.Status ) -> Color {
+    public static func status( _ type: SopoColor.Semantic.Status ) -> Color {
         type.color
     }
     
-    public static func avatar( _ type: SopoColor.Sementic.Avatar ) -> Color {
+    public static func avatar( _ type: SopoColor.Semantic.Avatar ) -> Color {
         type.color
     }
     
@@ -29,4 +29,5 @@ extension Color {
     public static func common( _ weight: SopoColor.Pallete.Common ) -> Color {
         weight.color
     }
+    
 }

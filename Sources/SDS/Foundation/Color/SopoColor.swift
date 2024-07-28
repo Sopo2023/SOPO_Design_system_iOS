@@ -2,6 +2,6 @@ import SwiftUI
 
 public struct SopoColor {
     public enum Pallete { }
-    public enum Sementic { }
+    public enum Semantic { }
 }
 
